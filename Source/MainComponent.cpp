@@ -3,6 +3,7 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
+    addAndMakeVisible(toggleButton); //child of our main component
     setSize (600, 400);
 }
 
@@ -26,4 +27,8 @@ void MainComponent::resized()
     // This is called when the MainComponent is resized.
     // If you add any child components, this is where you should
     // update their positions.
+
+    // in computer graphics, upper left corner is 0,0 and lower right corner is getWidth, getHeight
+
+    toggleButton.setBounds(10, 10, 30, 30); // upper left corner , size = 30X30
 }

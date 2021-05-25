@@ -7,7 +7,7 @@
     This component lives inside our window, and this is where you should put all
     your controls and content.
 */
-class MainComponent  : public juce::Component
+class MainComponent  : public juce::Component //main component is what u actually see
 {
 public:
     //==============================================================================
@@ -15,13 +15,13 @@ public:
     ~MainComponent() override;
 
     //==============================================================================
-    void paint (juce::Graphics&) override;
-    void resized() override;
+    void paint (juce::Graphics&) override; //child component under the main component
+    void resized() override; //controlling where they get positioned
 
 private:
     //==============================================================================
     // Your private member variables go here...
-
+    juce::ToggleButton toggleButton;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

@@ -10,7 +10,7 @@
 #include "MainComponent.h"
 
 //==============================================================================
-class HelloWorldApplication  : public juce::JUCEApplication
+class HelloWorldApplication  : public juce::JUCEApplication // HelloWorldApplication is the outer shell of the object
 {
 public:
     //==============================================================================
@@ -65,7 +65,7 @@ public:
                               DocumentWindow::allButtons)
         {
             setUsingNativeTitleBar (true);
-            setContentOwned (new MainComponent(), true);
+            setContentOwned (new MainComponent(), true); //the thing that we actually see
 
            #if JUCE_IOS || JUCE_ANDROID
             setFullScreen (true);
@@ -97,7 +97,7 @@ public:
     };
 
 private:
-    std::unique_ptr<MainWindow> mainWindow;
+    std::unique_ptr<MainWindow> mainWindow; // main window that we get to see
 };
 
 //==============================================================================
